@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 interface Props {
-    outline?: boolean;
+    outlined?: boolean;
 }
 
 export default styled.button<Props>`
-    background: ${props => props.outline ? 'transparent' : 'var(--twitter)'};
-    color: ${props => props.outline ? 'var(--twitter)' : 'var(--white)'};
-    border: ${props => props.outline ? '1px solid var(--twitter)' : 'none'};
+    background: ${props => props.outlined ? 'transparent' : 'var(--twitter)'};
+    color: ${props => props.outlined ? 'var(--twitter)' : 'var(--white)'};
+    border: ${props => props.outlined ? '1px solid var(--twitter)' : 'none'};
 
     padding: 16px;
     border-radius: 25px;
@@ -19,6 +19,6 @@ export default styled.button<Props>`
     outline: 0;
 
     &:hover {
-        background: ${props => props.outline ? 'var(--twitter-dark-hover)' : 'var(--twitter-light-hover)'};
+        background: ${props => props.outlined ? 'var(--twitter-dark-hover)' : 'var(--twitter-light-hover)'};
     }
 `;
