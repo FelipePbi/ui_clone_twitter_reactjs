@@ -19,7 +19,7 @@ const ProfilePage: React.FC = () => {
 
     return (
         <Container>
-            <Banner>
+            <Banner url={profile?.banner}>
                 <Avatar url={profile?.avatar} />
             </Banner>
 

@@ -15,19 +15,22 @@ export const Container = styled.div`
     }
 `;
 
-export const Banner = styled.div`
+export const Banner = styled.div<Props>`
     flex-shrink: 0;
 
     width: 100%;
     height: min(33vw, 199px);
 
     background: ${({ theme }) => theme.colors.twitter};
+    background-image: url(${({ url }) => url});
+    background-size: cover;
+    background-position: center;
 
     position: relative;
 `;
 
 interface Props {
-    url?: string;
+    url?: string | null;
 }
 
 export const Avatar = styled.div<Props>`
