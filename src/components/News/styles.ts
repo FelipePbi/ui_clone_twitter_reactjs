@@ -8,7 +8,7 @@ export const Container = styled.div`
     font: 14px;
 
     span {
-        color: var(--gray);
+        color: ${({ theme }) => theme.colors.gray};
 
         margin-bottom: 3px;
     }

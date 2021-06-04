@@ -15,7 +15,7 @@ import {
     BottomSide,
     Avatar,
     ProfileData,
-    ExitIcon
+    ExitIcon,
 } from './styles';
 
 const Layout: React.FC = () => {

@@ -21,7 +21,7 @@ export const Banner = styled.div`
     width: 100%;
     height: min(33vw, 199px);
 
-    background: var(--twitter);
+    background: ${({ theme }) => theme.colors.twitter};
 
     position: relative;
 `;
@@ -30,8 +30,8 @@ export const Avatar = styled.div`
     width: max(45px, min(135px, 22vw));
     height: max(45px, min(135px, 22vw));
 
-    border: 3.75px solid var(--primary);
-    background: var(--gray);
+    border: 3.75px solid ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.gray};
     border-radius: 50%;
 
     position: absolute;
@@ -57,7 +57,7 @@ export const ProfileData = styled.div`
         font-weight: normal;
         font-size: 15px;
 
-        color: var(--gray);
+        color: ${({ theme }) => theme.colors.gray};
     }
 
     > p {
@@ -66,7 +66,7 @@ export const ProfileData = styled.div`
 
         > a {
             text-decoration: none;
-            color: var(--twitter);
+            color: ${({ theme }) => theme.colors.twitter};
         }
     }
 
@@ -77,13 +77,14 @@ export const ProfileData = styled.div`
 
         > li {
             font-size: 15px;
-            color: var(--gray);
+            color: ${({ theme }) => theme.colors.gray};
+            padding: 1px 0;
 
             display: flex;
             align-items: center;
 
             > svg {
-                fill: var(--gray);
+                fill: ${({ theme }) => theme.colors.gray};
                 margin-right: 5px;
             }
         }
@@ -91,10 +92,10 @@ export const ProfileData = styled.div`
 `;
 
 const iconCSS = css`
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 
-    color: var(--gray);
+    color: ${({ theme }) => theme.colors.gray};
 `;
 
 export const LocationIcon = styled(LocationOn)`
@@ -110,7 +111,7 @@ export const Followage = styled.div`
 
     > span {
         font-size: 15px;
-        color: var(--gray);
+        color: ${({ theme }) => theme.colors.gray};
 
         & + span {
             margin-left: 20px;

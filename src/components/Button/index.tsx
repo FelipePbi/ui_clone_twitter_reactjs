@@ -5,9 +5,9 @@ interface Props {
 }
 
 export default styled.button<Props>`
-    background: ${props => props.outlined ? 'transparent' : 'var(--twitter)'};
-    color: ${props => props.outlined ? 'var(--twitter)' : 'var(--white)'};
-    border: ${props => props.outlined ? '1px solid var(--twitter)' : 'none'};
+    background: ${({ outlined, theme }) => outlined ? 'transparent' : theme.colors.twitter };
+    color: ${({ outlined, theme }) => outlined ? theme.colors.twitter : theme.colors.white };
+    border: ${({ outlined, theme }) => outlined ? `1px solid ${theme.colors.twitter}` : 'none'};
 
     padding: 16px;
     border-radius: 25px;
@@ -19,6 +19,6 @@ export default styled.button<Props>`
     outline: 0;
 
     &:hover {
-        background: ${props => props.outlined ? 'var(--twitter-dark-hover)' : 'var(--twitter-light-hover)'};
+        background: ${({ outlined, theme })  => outlined ? theme.colors.twitter_dark_hover : theme.colors.twitter_light_hover };
     }
 `;

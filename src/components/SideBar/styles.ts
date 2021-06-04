@@ -21,7 +21,7 @@ export const SearchWrapper = styled.div`
     top: 0;
 
     z-index: 2;
-    background: var(--primary);
+    background: ${({ theme }) => theme.colors.primary};
 
     max-height: 57px;
 `;
@@ -33,12 +33,12 @@ export const SearchInput = styled.input`
     font-size: 14px;
     padding: 0 10px 0 52px;
     border-radius: 19.5px;
-    background: var(--search);
+    background: ${({ theme }) => theme.colors.search};
 
     outline: 0;
 
     &::placeholder {
-        color: var(--gray);
+        color: ${({ theme }) => theme.colors.gray};
     }
 
     ~ svg {
@@ -51,10 +51,10 @@ export const SearchInput = styled.input`
     }
 
     &:focus {
-        border: 1px solid var(--twitter);
+        border: 1px solid ${({ theme }) => theme.colors.twitter};
 
       ~ svg {
-          fill: var(--twitter);
+          fill: ${({ theme }) => theme.colors.twitter};
       }
     }
 `;
@@ -63,7 +63,7 @@ export const SearchIcon = styled(Search)`
     width: 27px;
     height: 27px;
 
-    fill: var(--gray);
+    fill: ${({ theme }) => theme.colors.gray};
 `;
 
 export const Body = styled.div`

@@ -8,16 +8,16 @@ export const Container = styled.div`
     width: min(601px, 100%);
 
     @media(min-width: 500px) {
-        border-left: 1px solid var(--outline);
-        border-right: 1px solid var(--outline);
+        border-left: 1px solid ${({ theme }) => theme.colors.outline};
+        border-right: 1px solid ${({ theme }) => theme.colors.outline};
     }
 `;
 
 export const Header = styled.div`
     z-index: 2;
     position: sticky;
-    top:0;
-    background: var(--primary);
+    top: -0.1px;
+    background: ${({ theme }) => theme.colors.primary};
     
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@ export const Header = styled.div`
     text-align: left;
 
     padding: 8px 0 9px 13px;
-    border-bottom: 1px solid var(--outline);
+    border-bottom: 1px solid ${({ theme }) => theme.colors.outline};
 
     > button {
         padding: 8px;
@@ -35,7 +35,7 @@ export const Header = styled.div`
         cursor: pointer;
 
         &:hover {
-            background: var(--twitter-dark-hover);
+            background: ${({ theme }) => theme.colors.twitter_dark_hover};
         }
     }
 `;
@@ -44,7 +44,7 @@ export const BackIcon = styled(ArrowLeft)`
     height: 24px;
     width: 24px;
 
-    fill: var(--twitter);
+    fill: ${({ theme }) => theme.colors.twitter};
 `;
 
 export const ProfileInfo = styled.div`
@@ -59,7 +59,7 @@ export const ProfileInfo = styled.div`
 
     > span {
         font-size: 15px;
-        color: var(--gray)
+        color: ${({ theme }) => theme.colors.gray}
     }
 `;
 
@@ -69,9 +69,9 @@ export const BottomMenu = styled.div`
     left: 0;
     z-index: 2;
 
-    background: var(--primary);
+    background: ${({ theme }) => theme.colors.primary};
     width: 100%;
-    border-top: 1px solid var(--outline);
+    border-top: 1px solid ${({ theme }) => theme.colors.outline};
 
     display: flex;
     justify-content: space-between;
@@ -89,11 +89,11 @@ const iconCSS = css`
 
     cursor: pointer;
 
-    fill: var(--gray);
+    fill: ${({ theme }) => theme.colors.gray};
 
     &:hover,
     &.active {
-        fill: var(--twitter)
+        fill: ${({ theme }) => theme.colors.twitter}
     }
 `;
 

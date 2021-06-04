@@ -16,12 +16,12 @@ export const Tab = styled.div`
     outline: 0;
     cursor: pointer;
 
-    color: var(--twitter);
+    color: ${({ theme }) => theme.colors.twitter};
 
-    border-bottom: 2px solid var(--twitter);
+    border-bottom: 2px solid ${({ theme }) => theme.colors.twitter};
 
     &:hover {
-        background: var(--twitter-dark-hover);
+        background: ${({ theme }) => theme.colors.twitter_dark_hover};
     }
 `;
 

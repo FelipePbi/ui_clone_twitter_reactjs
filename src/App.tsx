@@ -1,14 +1,13 @@
 import React from 'react';
 
 import Layout from './components/Layout';
-import GlobalStyles from './styles/GlobalStyles';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
         <Layout />
-        <GlobalStyles />
-    </>
+    </ThemeProvider>
   );
 }
 

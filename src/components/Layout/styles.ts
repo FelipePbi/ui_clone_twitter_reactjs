@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background: var(--primary);
+    background: ${({ theme }) => theme.colors.primary};
 `;
 
 export const Wrapper = styled.div`

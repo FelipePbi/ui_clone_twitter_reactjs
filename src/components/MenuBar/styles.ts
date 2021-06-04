@@ -11,109 +11,87 @@ import {
 } from '../../styles/Icons';
 
 export const Container = styled.div`
-    display: none;
-
-    @media (min-width: 500px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        position: sticky;
-        top: 0;
-        left: 0;
-
-        padding: 9px 19px 20px;
-
-        max-height: 100vh;
-        overflow-y: auto;
-    }
+  display: none;
+  @media (min-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 9px 19px 20px;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
 `;
 
 export const TopSide = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media(min-width: 1280px) {
-        align-items: flex-start;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 1280px) {
+    align-items: flex-start;
+  }
 `;
 
 export const Logo = styled(Twitter)`
-    width: 41px;
-    height: 41px;
-
-    fill: var(--twitter);
-    margin-bottom: 20px;
-    margin-left: 15px;
+  width: 41px;
+  height: 41px;
+  > path {
+    fill: ${({ theme }) => theme.colors.twitter};
+  }
+  margin-bottom: 20px;
 `;
 
 export const MenuButton = styled.button`
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  > span {
+    display: none;
+  }
+  @media (min-width: 1280px) {
     > span {
-        display: none;
+      display: inline;
+      margin-left: 19px;
+      font-weight: bold;
+      font-size: 19px;
     }
-
+    padding-right: 15px;
+  }
+  padding: 8.25px 0;
+  outline: 0;
+  & + button {
+    margin-top: 16.5px;
+  }
+  & + button:last-child {
+    margin-top: 33px;
+    width: 40px;
+    height: 40px;
+    > span {
+      display: none;
+    }
     @media (min-width: 1280px) {
-        > span {
-            display: inline;
-            margin-left: 19px;
-
-            font-weight: bold;
-            font-size: 19px;
-
-        }
-        padding-right: 15px;
-        padding-left: 15px;
+      width: 100%;
+      height: unset;
+      > span {
+        display: inline;
+      }
     }
-
-    padding: 8.25px 0;
-    outline: 0;
-
-    & + button {
-        margin-top: 16.5px;
+  }
+  cursor: pointer;
+  border-radius: 25px;
+  &:hover {
+    background: ${({ theme }) => theme.colors.twitter_dark_hover};
+  }
+  &:hover,
+  &.active {
+    span,
+    svg {
+      color: ${({ theme }) => theme.colors.twitter};
+      fill: ${({ theme }) => theme.colors.twitter};
     }
-
-    & + button:last-child {
-        margin-top: 33px;
-
-        width: 40px;
-        height: 40px;
-
-        margin-left: 15px;
-
-        > span {
-            display: none;
-        }
-
-        @media (min-width: 1280px) {
-            > span {
-                width: 100%;
-                height: unset;
-
-                > span {
-                    display: inline;
-                }
-            }
-        }
-    }
-
-    cursor: pointer;
-    border-radius: 25px;
-
-    &:hover {
-        background: var(--twitter-dark-hover);
-    }
-
-    &:hover, &.active {
-        span, svg {
-            color: var(--twitter);
-            fill: var(--twitter);
-        }
-    }
+  }
 `;
 
 const iconCSS = css`
@@ -121,7 +99,7 @@ const iconCSS = css`
 
     width: 30px;
     height: 30px;
-    color: var(--white);
+    color: ${({ theme }) => theme.colors.white};
 `;
 
 export const HomeIcon = styled(Home)`
@@ -158,7 +136,7 @@ export const Avatar = styled.div`
     flex-shrink: 0;
 
     border-radius: 50%;
-    background: var(--gray);
+    background: ${({ theme }) => theme.colors.gray};
 `;
 
 export const ProfileData = styled.div`
@@ -172,7 +150,7 @@ export const ProfileData = styled.div`
         font-size: 14px;
 
         > span {
-            color: var(--gray);
+            color: ${({ theme }) => theme.colors.gray};
         }
     }
 `;
@@ -185,13 +163,13 @@ export const ExitIcon = styled(ExitToApp)`
 
         width: 25px;
         height: 25px;
-        color: var(--white);
+        color: ${({ theme }) => theme.colors.white};
         margin-left: 30px;
         cursor: pointer;
 
         &:hover {
             > path {
-                color: var(--like);
+                color: ${({ theme }) => theme.colors.like};
             }
         }
     }

@@ -8,7 +8,7 @@ export const Container = styled.div`
 
     padding: 14px 16px;
 
-    border-bottom: 1px solid var(--outline);
+    border-bottom: 1px solid ${({ theme }) => theme.colors.outline};
 
     max-width: 100%;
 `;
@@ -18,7 +18,7 @@ export const Retweeted = styled.div`
     align-items: center;
 
     font-size: 13px;
-    color: var(--gray);
+    color: ${({ theme }) => theme.colors.gray};
 `;
 
 export const RetweetedIcon = styled(Retweet)`
@@ -29,7 +29,7 @@ export const RetweetedIcon = styled(Retweet)`
     margin-right: 9px;
 
     > path {
-        fill: var(--gray);
+        fill: ${({ theme }) => theme.colors.gray};
     }
 `;
 
@@ -46,7 +46,7 @@ export const Avatar = styled.div`
     border-radius: 50%;
 
     flex-shrink: 0;
-    background: var(--gray);
+    background: ${({ theme }) => theme.colors.gray};
 
     position: absolute;
     top: 0;
@@ -72,7 +72,7 @@ export const Header = styled.div`
     }
 
     > span, time {
-        color: var(--gray)
+        color: ${({ theme }) => theme.colors.gray}
     }
 
     > strong, span {
@@ -83,7 +83,7 @@ export const Header = styled.div`
 `;
 
 export const Dot = styled.div`
-    background: var(--gray);
+    background: ${({ theme }) => theme.colors.gray};
     width: 2px;
     height: 2px;
     margin: 0 10px;
@@ -99,7 +99,7 @@ export const ImageContent = styled.div`
     width: 100%;
     height: min(285px, max(175px, 41vw));
 
-    background: var(--outline);
+    background: ${({ theme }) => theme.colors.outline};
     border-radius: 14px;
 
     cursor: pointer;
@@ -144,19 +144,19 @@ export const Status = styled.div`
 
     &:nth-child(1) {
         &, > svg path {
-            color: var(--gray);
+            color: ${({ theme }) => theme.colors.gray};
         }
     }
 
     &:nth-child(2) {
         &, > svg path {
-            color: var(--retweet);
+            color: ${({ theme }) => theme.colors.retweet};
         }
     }
 
     &:nth-child(3) {
         &, > svg path {
-            color: var(--like);
+            color: ${({ theme }) => theme.colors.like};
         }
     }
 `;
