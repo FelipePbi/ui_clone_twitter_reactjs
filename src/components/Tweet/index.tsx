@@ -18,39 +18,51 @@ import {
     RetweetedIcon
 } from './styles';
 
-const Tweet: React.FC = () => {
+import {Tweets} from '../../hooks/Profile.hook';
+
+interface Props {
+    data: Tweets
+}
+
+
+const Tweet: React.FC<Props> = ({data}) => {
     return (
         <Container>
-            <Retweeted>
-                <RetweetedIcon />
-                Você retweetou
-            </Retweeted>
+
+            {data?.retweeted && (
+                <Retweeted>
+                    <RetweetedIcon />
+                    Você retweetou
+                </Retweeted>
+            )}
 
             <Body>
-                <Avatar />
+                <Avatar url={data?.avatar } />
                 <Content>
                     <Header>
-                        <strong>Felipe Borges</strong>
-                        <span>@felipe_borges</span>
+                        <strong>{data?.name}</strong>
+                        <span>{data?.nickname}</span>
                         <Dot />
-                        <time>30 de maio</time>
+                        <time>{data?.date}</time>
                     </Header>
-                    <Description>Foguetes não tem ré</Description>
+                    <Description>{data?.description}</Description>
 
-                    <ImageContent />
+                    {data?.image && (
+                        <ImageContent url={data?.image } />
+                    )}
 
                     <Icons>
                         <Status>
                             <CommentIcon />
-                            18
+                            {data.comments}
                         </Status>
                         <Status>
                             <RetweetIcon />
-                            18
+                            {data.retweets}
                         </Status>
                         <Status>
                             <LikeIcon />
-                            298
+                            {data.likes}
                         </Status>
                     </Icons>
                 </Content>

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import StickyBox from 'react-sticky-box';
+
+import useProfile from '../../hooks/Profile.hook';
 
 import List from '../List';
 import FollowSuggestion from '../FollowSuggestion';
@@ -14,6 +16,17 @@ import {
 } from './styles';
 
 const SideBar: React.FC = () => {
+    const profile = useProfile();
+
+    const followingSuggestion = useMemo(() => {
+        const suggestions = profile?.followSuggestion;
+
+        if (suggestions && suggestions.length) {
+            return  suggestions.map(element => <FollowSuggestion name={element.name} nickname={element.nickname} avatar={element.avatar} />);
+        } 
+        return [];      
+    }, [profile]);
+
     return (
         <Container>
             <SearchWrapper>
@@ -25,20 +38,7 @@ const SideBar: React.FC = () => {
                 <Body>
                     <List
                         title="Talvez você curta"
-                        elements={[
-                            <FollowSuggestion
-                                name="Luiz Batanero"
-                                nickname="@luizbatanero"
-                            />,
-                            <FollowSuggestion
-                                name="Luiz Batanero"
-                                nickname="@luizbatanero"
-                            />,
-                            <FollowSuggestion
-                                name="Luiz Batanero"
-                                nickname="@luizbatanero"
-                            />,
-                        ]}
+                        elements={followingSuggestion}
                     />
 
                     <List

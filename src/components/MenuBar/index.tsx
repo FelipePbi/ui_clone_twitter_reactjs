@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '../Button';
+import useProfile from '../../hooks/Profile.hook';
 
 import {
     Container,
@@ -19,6 +20,8 @@ import {
 } from './styles';
 
 const Layout: React.FC = () => {
+    const profile = useProfile();
+
     return (
         <Container>
             <TopSide>
@@ -55,11 +58,11 @@ const Layout: React.FC = () => {
             </TopSide>
 
             <BottomSide>
-                <Avatar />
+                <Avatar url={profile?.avatar} />
 
                 <ProfileData>
-                    <strong>Felipe Borges</strong>
-                    <span>@felipe_borges</span>
+                    <strong>{profile?.name}</strong>
+                    <span>{profile?.nickname}</span>
                 </ProfileData>
 
                 <ExitIcon />

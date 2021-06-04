@@ -20,6 +20,10 @@ export const Container = styled.div`
     button:nth-child(4) {
         background-color: #e88300;
     }
+
+    button.active {
+        border: solid 3px;
+    }
 `;
 
 export const Button = styled.button`
@@ -28,6 +32,8 @@ export const Button = styled.button`
     border-radius: 50%;
 
     cursor: pointer;
+
+    transition: all 0.2s ease;
 
     &:hover {
         opacity: 0.7;

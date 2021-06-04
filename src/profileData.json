@@ -1,0 +1,100 @@
+{
+    "avatar": "https://pbs.twimg.com/profile_images/1400658561080991744/bIQxxgPT_400x400.jpg",
+    "banner": null,
+    "name": "Felipe Borges",
+    "nickname": "@felipe_Borges",
+    "description": "Developer at <a href='https://www.globo.com/'>Globo</a>",
+    "city": "Panambi",
+    "country": "Brasil",
+    "birth": "21 de novembro de 1995",
+    "followers": 563,
+    "followings": 263,
+    "tweets_total": 832,
+    "followSuggestion": [
+        {
+            "name": "ɹoʇɔıʌ ➐",
+            "nickname": "@vitinho_contente",
+            "avatar": "https://pbs.twimg.com/profile_images/1397065421963005952/rV4_IMrl_400x400.jpg"
+        },
+        {
+            "name": "Vítor Holtz",
+            "nickname": "@holtzera",
+            "avatar": "https://pbs.twimg.com/profile_images/897643497897021441/hTzh4RT1_400x400.jpg"
+        },
+        {
+            "name": "Kauezera",
+            "nickname": "@kakau",
+            "avatar": "https://pbs.twimg.com/profile_images/1396175306013167617/L5mwbiDO_400x400.jpg"
+        }
+    ],
+    "tweets": [
+        {
+            "description": "Foguetes não tem ré, REACT até a LUA!",
+            "retweeted": true,
+            "date": "30 de maio",
+            "image": "https://universodiscreto.com/wp-content/uploads/2020/01/ReactJS-1024x429-1.png",
+            "retweets": 85,
+            "comments": 56,
+            "likes": 298
+        },
+        {
+            "description": "O empenho em analisar a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das regras de conduta normativas.",
+            "retweeted": false,
+            "date": "16 de maio",
+            "retweets": 11,
+            "comments": 18,
+            "likes": 36
+        },
+        {
+            "description": "Por conseguinte, a hegemonia do ambiente político nos obriga à análise de alternativas às soluções ortodoxas.",
+            "retweeted": false,
+            "date": "15 de abril",
+            "retweets": 381,
+            "comments": 253,
+            "likes": 912
+        },
+        {
+            "description": "Desde ontem a noite o último pull request desse SCRUM otimizou a renderização no fechamento automático das tags.",
+            "retweeted": false,
+            "date": "26 de fevereiro",
+            "retweets": 123,
+            "image": "https://www.trace.com.br/wp-content/uploads/2018/08/scrum-palestra-banner.png",
+            "comments": 321,
+            "likes": 432
+        },
+        {
+            "description": "Foguetes não tem ré, REACT até a LUA!",
+            "retweeted": true,
+            "date": "30 de maio",
+            "image": "https://universodiscreto.com/wp-content/uploads/2020/01/ReactJS-1024x429-1.png",
+            "retweets": 85,
+            "comments": 56,
+            "likes": 298
+        },
+        {
+            "description": "O empenho em analisar a valorização de fatores subjetivos oferece uma interessante oportunidade para verificação das regras de conduta normativas.",
+            "retweeted": false,
+            "date": "16 de maio",
+            "retweets": 11,
+            "comments": 18,
+            "likes": 36
+        },
+        {
+            "description": "Por conseguinte, a hegemonia do ambiente político nos obriga à análise de alternativas às soluções ortodoxas.",
+            "retweeted": false,
+            "date": "15 de abril",
+            "retweets": 381,
+            "comments": 253,
+            "likes": 912
+        },
+        {
+            "description": "Desde ontem a noite o último pull request desse SCRUM otimizou a renderização no fechamento automático das tags.",
+            "retweeted": false,
+            "date": "26 de fevereiro",
+            "retweets": 123,
+            "image": "https://www.trace.com.br/wp-content/uploads/2018/08/scrum-palestra-banner.png",
+            "comments": 321,
+            "likes": 432
+        }
+    ]
+}

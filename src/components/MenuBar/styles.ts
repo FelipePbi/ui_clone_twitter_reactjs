@@ -129,7 +129,11 @@ export const BottomSide = styled.div`
     align-items: center;
 `;
 
-export const Avatar = styled.div`
+interface Props {
+    url?: string;
+}
+
+export const Avatar = styled.div<Props>`
     width: 39px;
     height: 39px;
 
@@ -137,6 +141,8 @@ export const Avatar = styled.div`
 
     border-radius: 50%;
     background: ${({ theme }) => theme.colors.gray};
+    background-image: url(${({ url }) => url});
+    background-size: cover;
 `;
 
 export const ProfileData = styled.div`

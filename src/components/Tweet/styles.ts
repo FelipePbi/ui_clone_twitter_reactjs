@@ -2,6 +2,10 @@ import styled, { css } from 'styled-components';
 
 import { Chat, Favorite, Retweet } from '../../styles/Icons';
 
+interface Props {
+    url?: string;
+}
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -40,13 +44,15 @@ export const Body = styled.div`
     position: relative;
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.div<Props>`
     width: 49px;
     height: 49px;
     border-radius: 50%;
 
     flex-shrink: 0;
     background: ${({ theme }) => theme.colors.gray};
+    background-image: url(${({ url }) => url});
+    background-size: cover;
 
     position: absolute;
     top: 0;
@@ -94,12 +100,14 @@ export const Description = styled.p`
     margin-top: 4px;
 `;
 
-export const ImageContent = styled.div`
+export const ImageContent = styled.div<Props>`
     margin-top: 12px;
     width: 100%;
     height: min(285px, max(175px, 41vw));
 
     background: ${({ theme }) => theme.colors.outline};
+    background-image: url(${({ url }) => url});
+    background-size: cover;
     border-radius: 14px;
 
     cursor: pointer;
@@ -166,11 +174,11 @@ const iconCSS = css`
     height: 19px;
 `;
 
-export const RetweetIcon = styled(Chat)`
+export const RetweetIcon = styled(Retweet)`
     ${iconCSS}
 `;
 
-export const CommentIcon = styled(Retweet)`
+export const CommentIcon = styled(Chat)`
     ${iconCSS}
 `;
 

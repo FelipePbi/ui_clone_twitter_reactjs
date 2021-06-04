@@ -26,18 +26,25 @@ export const Banner = styled.div`
     position: relative;
 `;
 
-export const Avatar = styled.div`
+interface Props {
+    url?: string;
+}
+
+export const Avatar = styled.div<Props>`
     width: max(45px, min(135px, 22vw));
     height: max(45px, min(135px, 22vw));
 
     border: 3.75px solid ${({ theme }) => theme.colors.primary};
-    background: ${({ theme }) => theme.colors.gray};
     border-radius: 50%;
 
     position: absolute;
     bottom: max(-60px, -10vw);
 
     left: 15px;
+
+    background: ${({ theme }) => theme.colors.gray};
+    background-image: url(${({ url }) => url});
+    background-size: cover;
 `;
 
 export const ProfileData = styled.div`

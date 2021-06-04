@@ -14,10 +14,10 @@ const ButtonTheme: React.FC = () => {
     
     return (
         <Container>
-            <Button onClick={() => changeThemeCb("blue")} />
-            <Button onClick={() => changeThemeCb("red")} />
-            <Button onClick={() => changeThemeCb("green")} />
-            <Button onClick={() => changeThemeCb("orange")} />
+            <Button className={theme === "blue" ? "active" : ""} onClick={() => changeThemeCb("blue")} />
+            <Button className={theme === "red" ? "active" : ""} onClick={() => changeThemeCb("red")} />
+            <Button className={theme === "green" ? "active" : ""} onClick={() => changeThemeCb("green")} />
+            <Button className={theme === "orange" ? "active" : ""} onClick={() => changeThemeCb("orange")} />
         </Container>
     );
 };
