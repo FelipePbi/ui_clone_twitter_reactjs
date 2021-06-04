@@ -15,8 +15,6 @@ interface Theme {
     twitter_dark_hover: string;
     twitter_light_hover: string;
   };
-  gradient: string;
-  boxShadow: string;
 }
 
 declare module 'styled-components' {
